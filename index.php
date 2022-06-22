@@ -11,7 +11,7 @@
 	<?php
 		ini_set("include_path", '/home/hogoshaj/php:' . ini_get("include_path") );
 		echo "test!<br>";
-		$directory = scandir(".");
+		$directory = scandir("./tournament/Tohkon\ 2022/");
 		foreach	($directory as $item) {
 			echo "$item <br>";
 		}
