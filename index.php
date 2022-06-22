@@ -2,9 +2,10 @@
 	$dom = new DOMDocument();
 	$dom->loadHTMLFile("/default.html");
 
-	function changesource($newsource, $dom) {
+	function changesource($newsource) {
+		global $dom;
 		$dom = new DOMDocument();
-		//$dom->loadHTMLFile("default.html");
+		$dom->loadHTMLFile("default.html");
 
 		echo $newsource . "<br>";
 		$selected = $newsource;
