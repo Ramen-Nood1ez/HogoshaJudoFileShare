@@ -11,6 +11,15 @@
 		echo "</video> <br>";
 	}
 
+	function createButtons($directory) {
+		echo "<form method='post'>\n";
+
+		for	($x = 0; $x < count($directory); $x++) {
+			echo "\t<input type='submit' name='$directory[$x]' value='$x'>\n";
+		}
+		echo "</form>";
+	}
+
 	$directory = scandir("./tournament/Tohkon_2022/");
 	foreach	($directory as $item) {
 		echo "$item <br>";
