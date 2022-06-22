@@ -70,7 +70,7 @@
 	}
 
 	if (!$found_selected) {
-		createButtons($directory);
+		createButtons($directory, ($selected_tournament === "") ? true : false);
 		finish();
 	}
 
