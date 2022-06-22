@@ -24,6 +24,12 @@ a, a:visited {
     color: var(--primary-color);
 }
 
+.top_right {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
 .primary_variant {
     color: var(--primary-color-variant);
 }

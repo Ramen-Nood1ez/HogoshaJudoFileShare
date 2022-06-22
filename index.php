@@ -24,7 +24,7 @@
 	}
 
 	function finish() {
-		echo "<a href='logout.php'>Logout</a>";
+		echo "<a href='logout.php' class='top_right'>Logout</a>";
 		echo "\n</body>\n</html>";
 	}
 
