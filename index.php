@@ -15,7 +15,8 @@
 		echo "<form method='post'>\n";
 
 		for	($x = 0; $x < count($directory); $x++) {
-			echo "\t<input type='submit' name='btn$directory[$x]' value='$x'>\n";
+			$file_name = $directory[$x];
+			echo "\t<input type='submit' name='btn$x' value='$file_name'> <br>\n";
 		}
 		echo "</form>";
 	}
