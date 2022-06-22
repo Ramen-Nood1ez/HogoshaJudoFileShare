@@ -2,13 +2,11 @@
 	$dom = new DOMDocument();
 	$path = "/tournament/"; // Tohkon_2022/";
 
-	$temp = "";
+	$selected_tournament = "";
+	
 	if (isset($_GET["tournament"])) {
-		$temp = htmlspecialchars($_GET["tournament"]) . "/";
+		$selected_tournament = htmlspecialchars($_GET["tournament"]) . "/";
 	}
-
-	define("SELECTED_TOURNAMENT", $temp);
-	unset($temp);
 
 	function init() {
 		global $dom;
@@ -48,7 +46,7 @@
 
 	init();
 
-	$directory = scandir("./tournament/" . $SELECTED_TOURNAMENT); // Tohkon_2022/");
+	$directory = scandir("./tournament/" . $selected_tournament); // Tohkon_2022/");
 
 	$found_selected = false;
 
