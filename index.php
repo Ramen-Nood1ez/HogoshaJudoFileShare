@@ -5,8 +5,8 @@
 
 	function changesource($newsource) {
 		global $dom, $path;
-		$dom = new DOMDocument();
-		$dom->loadHTMLFile("/default.html");
+		// $dom = new DOMDocument();
+		$dom->loadHTMLFile("./default.html");
 
 		echo $newsource . "<br>";
 		$selected = $path . $newsource;
@@ -32,7 +32,6 @@
 
 	for ($x = 2; $x < count($directory); $x++) {
 		$file_name = $directory[$x];
-		echo $file_name;
 		if (isset($_POST["btn$x"])) {
 			changesource($file_name, $dom);
 			$found_selected = true;
