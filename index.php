@@ -20,7 +20,7 @@
 	<br>
 
 	<video controls>
-		<source src="/tournament/Tohkon_2022/Aimana_Daniyar_vs_Peyton_Lang.MOV" type="video/mov">
+		<source src="/tournament/Tohkon_2022/Aimana_Daniyar_vs_Peyton_Lang.MOV" type="video/mp4">
 	</video>
 </body>
 </html>
