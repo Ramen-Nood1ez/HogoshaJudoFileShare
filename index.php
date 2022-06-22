@@ -1,12 +1,20 @@
 <?php
 	$dom = new DOMDocument();
-	init();
 	$path = "/tournament/Tohkon_2022/";
 
-	function changesource($newsource) {
-		global $dom, $path;
+	function init() {
+		global $dom;
 		$dom = new DOMDocument();
 		$dom->loadHTMLFile("./default.html");
+	}
+
+	function finish() {
+		echo "\n</body>\n</html>";
+	}
+
+	function changesource($newsource) {
+		global $path;
+		init();
 
 		echo $newsource . "<br>";
 		$selected = $path . $newsource;
@@ -14,6 +22,8 @@
 		echo "<video width='320' height='240' controls>\n";
 		echo "\t <source src=" . $selected . " type='video/mp4'>\n";
 		echo "</video> <br>";
+
+		finish();
 	}
 
 	function createButtons($directory) {
@@ -26,15 +36,7 @@
 		echo "</form>";
 	}
 
-	function init() {
-		global $dom;
-		$dom = new DOMDocument();
-		$dom->loadHTMLFile("./default.html");
-	}
-
-	function finish() {
-		echo "\n</body>\n</html>";
-	}
+	init();
 
 	$directory = scandir("./tournament/Tohkon_2022/");
 
@@ -51,9 +53,8 @@
 
 	if (!$found_selected) {
 		createButtons($directory);
+		finish();
 	}
-
-	finish();
 
 	/*
 	foreach	($directory as $item) {
