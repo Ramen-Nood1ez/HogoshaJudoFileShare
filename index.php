@@ -15,7 +15,7 @@
 		echo "<form method='post'>\n";
 
 		for	($x = 0; $x < count($directory); $x++) {
-			echo "\t<input type='submit' name='$directory[$x]' value='$x'>\n";
+			echo "\t<input type='submit' name='btn$directory[$x]' value='$x'>\n";
 		}
 		echo "</form>";
 	}
@@ -23,7 +23,7 @@
 	$directory = scandir("./tournament/Tohkon_2022/");
 
 	for ($x = 0; $x < count($directory); $x++) {
-		if (isset($_POST[$x])) {
+		if (isset($_POST["btn$x"])) {
 			changesource($directory[$x], $dom);
 			break;
 		}
