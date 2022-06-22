@@ -5,7 +5,7 @@
 	function init() {
 		global $dom;
 		$dom = new DOMDocument();
-		$dom->loadHTMLFile("./default.html");
+		$dom->loadHTMLFile("/default.html");
 	}
 
 	function finish() {
