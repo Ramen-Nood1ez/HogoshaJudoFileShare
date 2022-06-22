@@ -6,6 +6,8 @@
 		$dom = new DOMDocument();
 		$dom->loadHTMLFile("default.html");
 
+		echo $newsource;
+
 		echo "<video width='320' height='240' controls>\n";
 		echo "\t <source src=$newsource type='video/mp4'>\n";
 		echo "</video> <br>";
