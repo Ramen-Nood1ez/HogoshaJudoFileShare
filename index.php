@@ -26,15 +26,20 @@
 
 	$directory = scandir("./tournament/Tohkon_2022/");
 
+	$found_selected = false;
+
 	for ($x = 0; $x < count($directory); $x++) {
 		$file_name = $directory[$x];
 		if (isset($_POST["btn$x"])) {
 			changesource($file_name, $dom);
+			$found_selected = true;
 			break;
 		}
 	}
 
-	createButtons($directory);
+	if (!$found_selected) {
+		createButtons($directory);
+	}
 
 	/*
 	foreach	($directory as $item) {
