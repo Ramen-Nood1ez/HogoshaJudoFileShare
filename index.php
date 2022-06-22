@@ -13,7 +13,7 @@
 		echo "test!<br>";
 		$directory = scandir(".");
 		foreach	($directory as $item) {
-			echo "$item <br>"
+			echo "$item <br>";
 		}
 	?>
 </body>
