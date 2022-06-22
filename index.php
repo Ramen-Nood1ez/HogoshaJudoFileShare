@@ -40,7 +40,7 @@
 		echo "<video width='320' height='240' controls muted>\n";
 		echo "\t <source src=" . $selected . " type='video/mp4'>\n";
 		echo "</video> <br>";
-		echo "<a href='/?$selected_tournament'>Back</a>";
+		echo "<a href='/?tournament=$selected_tournament'>Back</a>";
 
 		finish();
 	}
@@ -57,7 +57,7 @@
 				echo "\t<input type='submit' name='btn$x' value='$file_name'> <br>\n";
 			}
 			echo "</form>";
-			echo "<a href='/index.php?tournament=$selected_tournament_name'>Back</a>";
+			echo "<a href='/'>Back</a>";
 		} else {
 			for	($x = 2; $x < count($directory); $x++) {
 				$tournament_name = $directory[$x];
