@@ -34,6 +34,8 @@
 			echo "\t<input type='submit' name='btn$x' value='$file_name'> <br>\n";
 		}
 		echo "</form>";
+
+		echo "<a href='/'>Back</a>";
 	}
 
 	init();
