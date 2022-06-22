@@ -66,7 +66,7 @@
 								$_SESSION["username"] = $username;
 
 								// Redirect user to main page
-								header("location: main.php");
+								header("location: index.php");
 							} else {
 								// Password is not valid, display a generic error message
 								$login_err = "Invalid username or password.";
