@@ -23,7 +23,7 @@
 		global $dom;
 		$dom = new DOMDocument();
 		echo '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><title>Hogosha Judo File Share</title><link rel="stylesheet" href="style.css"></head><body>';
-		echo "<a href='logout.php' class='top_right'>Logout</a> <br>";
+		echo "<a href='logout.php' style='position: absolute; top: 0; right: 0;'>Logout</a> <br>";
 	}
 
 	function finish() {
