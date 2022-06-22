@@ -1,12 +1,13 @@
 <?php
 	$dom = new DOMDocument();
-	$path = "/tournament/"; // Tohkon_2022/";
 
 	$selected_tournament = "";
-	
+
 	if (isset($_GET["tournament"])) {
 		$selected_tournament = htmlspecialchars($_GET["tournament"]) . "/";
 	}
+
+	$path = "/tournament/" . $selected_tournament; // Tohkon_2022/";
 
 	function init() {
 		global $dom;
