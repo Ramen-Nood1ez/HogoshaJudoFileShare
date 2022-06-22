@@ -5,7 +5,7 @@
 
 	function changesource($newsource) {
 		global $dom, $path;
-		// $dom = new DOMDocument();
+		$dom = new DOMDocument();
 		$dom->loadHTMLFile("./default.html");
 
 		echo $newsource . "<br>";
