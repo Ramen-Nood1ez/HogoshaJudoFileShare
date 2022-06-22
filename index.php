@@ -1,6 +1,6 @@
 <?php
 	$dom = new DOMDocument();
-	$dom->loadHTMLFile("/default.html");
+	init();
 	$path = "/tournament/Tohkon_2022/";
 
 	function changesource($newsource) {
@@ -26,6 +26,16 @@
 		echo "</form>";
 	}
 
+	function init() {
+		global $dom;
+		$dom = new DOMDocument();
+		$dom->loadHTMLFile("./default.html");
+	}
+
+	function finish() {
+		echo "\n</body>\n</html>";
+	}
+
 	$directory = scandir("./tournament/Tohkon_2022/");
 
 	$found_selected = false;
@@ -42,6 +52,8 @@
 	if (!$found_selected) {
 		createButtons($directory);
 	}
+
+	finish();
 
 	/*
 	foreach	($directory as $item) {
