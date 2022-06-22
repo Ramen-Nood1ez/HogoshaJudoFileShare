@@ -49,7 +49,7 @@
 		} else {
 			for	($x = 2; $x < count($directory); $x++) {
 				$tournament_name = $directory[$x];
-				echo "<a href='/?tournament=$tournament_name'> <br>\n";
+				echo "<a href='/?tournament=$tournament_name'>$tournament_name</a> <br>\n";
 			}
 		}
 	}
