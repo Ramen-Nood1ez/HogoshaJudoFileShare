@@ -59,14 +59,14 @@
 			echo "</form>";
 			
 			if (!empty($selected_tournament_name)) {
-				echo "<a href='/?$selected_tournament_name'>Back</a>";
+				echo "<a href='/index.php?$selected_tournament_name'>Back</a>";
 			} else {
 				echo "<a href='/'>Back</a>";
 			}
 		} else {
 			for	($x = 2; $x < count($directory); $x++) {
 				$tournament_name = $directory[$x];
-				echo "<a href='?tournament=$tournament_name'>$tournament_name</a> <br>\n";
+				echo "<a href='/?tournament=$tournament_name'>$tournament_name</a> <br>\n";
 			}
 		}
 	}
