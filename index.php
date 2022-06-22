@@ -1,4 +1,12 @@
 <?php
+	session_start();
+	if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+		header("location: login.php");
+		exit;
+	}
+?>
+
+<?php
 	$dom = new DOMDocument();
 
 	$selected_tournament = "";
@@ -16,6 +24,7 @@
 	}
 
 	function finish() {
+		echo "<a href='logout.php'>Logout</a>";
 		echo "\n</body>\n</html>";
 	}
 
