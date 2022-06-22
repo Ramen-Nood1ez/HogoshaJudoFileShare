@@ -16,8 +16,11 @@
 			echo "$item <br>";
 		}
 
+		$selected = "/tournament/Tohkon_2022/Aimana_Daniyar_vs_Peyton_Lang.MOV";
+
 		echo "<video width='320' height='240' controls>\n";
-		echo "\t <source"
+		echo "\t <source src=$selected type='video/mp4'>\n";
+		echo "</video> <br>"
 	?>
 
 	<br>
