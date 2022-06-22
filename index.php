@@ -4,7 +4,7 @@
 
 	$temp = "";
 	if (isset($_GET["tournament"])) {
-		$temp = htmlspecialchars($_GET["tournament"]);
+		$temp = htmlspecialchars($_GET["tournament"]) . "/";
 	}
 
 	define("SELECTED_TOURNAMENT", $temp);
