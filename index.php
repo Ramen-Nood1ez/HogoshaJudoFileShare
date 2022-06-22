@@ -31,6 +31,7 @@
 
 	for ($x = 2; $x < count($directory); $x++) {
 		$file_name = $directory[$x];
+		echo $file_name;
 		if (isset($_POST["btn$x"])) {
 			changesource($file_name, $dom);
 			$found_selected = true;
