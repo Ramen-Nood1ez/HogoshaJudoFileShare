@@ -15,12 +15,17 @@
 		foreach	($directory as $item) {
 			echo "$item <br>";
 		}
+
+		echo "<video width='320' height='240' controls>\n";
+		echo "\t <source"
 	?>
 
 	<br>
 
 	<video controls>
-		<source src="/tournament/Tohkon_2022/Aimana_Daniyar_vs_Peyton_Lang.MOV" type="video/mp4">
+		<source 
+		src="/tournament/Tohkon_2022/Aimana_Daniyar_vs_Peyton_Lang.MOV" 
+		type="video/mp4">
 	</video>
 </body>
 </html>
