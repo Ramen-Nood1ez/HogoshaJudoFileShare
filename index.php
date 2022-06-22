@@ -5,7 +5,7 @@
 	function changesource($newsource) {
 		global $dom;
 		$dom = new DOMDocument();
-		$dom->loadHTMLFile("default.html");
+		$dom->loadHTMLFile("/default.html");
 
 		echo $newsource . "<br>";
 		$selected = $newsource;
@@ -18,7 +18,7 @@
 	function createButtons($directory) {
 		echo "<form method='post'>\n";
 
-		for	($x = 0; $x < count($directory); $x++) {
+		for	($x = 3; $x < count($directory); $x++) {
 			$file_name = $directory[$x];
 			echo "\t<input type='submit' name='btn$x' value='$file_name'> <br>\n";
 		}
@@ -29,7 +29,7 @@
 
 	$found_selected = false;
 
-	for ($x = 0; $x < count($directory); $x++) {
+	for ($x = 2; $x < count($directory); $x++) {
 		$file_name = $directory[$x];
 		if (isset($_POST["btn$x"])) {
 			changesource($file_name, $dom);
