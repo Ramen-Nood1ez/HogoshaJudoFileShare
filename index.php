@@ -21,6 +21,17 @@
 	}
 
 	$directory = scandir("./tournament/Tohkon_2022/");
+
+	for ($x = 0; $x < count($directory); $x++) {
+		if (isset($_POST[$x])) {
+			changesource($directory[$x], $dom);
+			break;
+		}
+	}
+
+	createButtons($directory);
+
+	/*
 	foreach	($directory as $item) {
 		echo "$item <br>";
 	}
@@ -30,4 +41,5 @@
 	echo "<video width='320' height='240' controls>\n";
 	echo "\t <source src=$selected type='video/mp4'>\n";
 	echo "</video> <br>";
+	*/
 ?>
