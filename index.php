@@ -4,7 +4,7 @@
 
 	function changesource($newsource, $dom) {
 		$dom = new DOMDocument();
-		$dom->loadHTMLFile("/default.html");
+		$dom->loadHTMLFile("default.html");
 
 		echo "<video width='320' height='240' controls>\n";
 		echo "\t <source src=$newsource type='video/mp4'>\n";
@@ -24,8 +24,9 @@
 	$directory = scandir("./tournament/Tohkon_2022/");
 
 	for ($x = 0; $x < count($directory); $x++) {
+		$file_name = $directory[$x];
 		if (isset($_POST["btn$x"])) {
-			changesource($directory[$x], $dom);
+			changesource($file_name, $dom);
 			break;
 		}
 	}
