@@ -10,8 +10,11 @@
 <body>
 	<?php
 		ini_set("include_path", '/home/hogoshaj/php:' . ini_get("include_path") );
-		echo "test!";
-		echo scandir(".")
+		echo "test!<br>";
+		$directory = scandir(".");
+		foreach	($directory as $item) {
+			echo "$item <br>"
+		}
 	?>
 </body>
 </html>
