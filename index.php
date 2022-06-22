@@ -10,7 +10,8 @@
 <body>
 	<?php
 		ini_set("include_path", '/home/hogoshaj/php:' . ini_get("include_path") );
-		echo "test!"
+		echo "test!";
+		echo scandir(".")
 	?>
 </body>
 </html>
