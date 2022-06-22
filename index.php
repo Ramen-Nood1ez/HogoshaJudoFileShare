@@ -57,7 +57,7 @@
 				echo "\t<input type='submit' name='btn$x' value='$file_name'> <br>\n";
 			}
 			echo "</form>";
-			echo "<a href='/index.php?$selected_tournament_name'>Back</a>";
+			echo "<a href='/index.php?tournament=$selected_tournament_name'>Back</a>";
 		} else {
 			for	($x = 2; $x < count($directory); $x++) {
 				$tournament_name = $directory[$x];
