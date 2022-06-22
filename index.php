@@ -4,7 +4,7 @@
 
 	function changesource($newsource, $dom) {
 		$dom = new DOMDocument();
-		$dom->loadHTMLFile("default.html");
+		//$dom->loadHTMLFile("default.html");
 
 		echo $newsource . "<br>";
 		$selected = $newsource;
