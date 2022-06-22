@@ -35,7 +35,7 @@
 		echo $newsource . "<br>";
 		$selected = $path . $newsource;
 
-		echo "<video width='320' height='240' controls>\n";
+		echo "<video width='320' height='240' controls muted>\n";
 		echo "\t <source src=" . $selected . " type='video/mp4'>\n";
 		echo "</video> <br>";
 		echo "<a href='/?$selected_tournament'>Back</a>";
