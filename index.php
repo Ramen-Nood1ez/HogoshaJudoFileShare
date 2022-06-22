@@ -16,5 +16,11 @@
 			echo "$item <br>";
 		}
 	?>
+
+	<br>
+
+	<video controls>
+		<source src="./tournament/Tohkon 2022/Aimana Daniyar vs. Peyton Lang.MOV" type="video/mov">
+	</video>
 </body>
 </html>
