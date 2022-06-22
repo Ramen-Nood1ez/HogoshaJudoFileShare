@@ -10,9 +10,11 @@
 	$dom = new DOMDocument();
 
 	$selected_tournament = "";
+	$selected_tournament_name = "";
 
 	if (isset($_GET["tournament"])) {
 		$selected_tournament = htmlspecialchars($_GET["tournament"]) . "/";
+		$selected_tournament_name = htmlspecialchars($_GET["tournament"]);
 	}
 
 	$path = "/tournament/" . $selected_tournament; // Tohkon_2022/";
@@ -46,6 +48,8 @@
 	function createButtons($directory, $tournaments = false) {
 		if (!$tournaments) {
 
+			global $selected_tournament_name;
+
 			echo "<form method='post'>\n";
 
 			for	($x = 2; $x < count($directory); $x++) {
@@ -53,8 +57,12 @@
 				echo "\t<input type='submit' name='btn$x' value='$file_name'> <br>\n";
 			}
 			echo "</form>";
-
-			echo "<a href='/'>Back</a>";
+			
+			if (!empty($selected_tournament_name)) {
+				echo "<a href='/?$selected_tournament_name'>Back</a>";
+			} else {
+				echo "<a href='/'>Back</a>";
+			}
 		} else {
 			for	($x = 2; $x < count($directory); $x++) {
 				$tournament_name = $directory[$x];
