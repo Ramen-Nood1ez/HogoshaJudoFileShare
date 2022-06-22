@@ -10,7 +10,7 @@
 		$selected = $newsource;
 
 		echo "<video width='320' height='240' controls>\n";
-		echo "\t <source src=$selected type='video/mp4'>\n";
+		echo "\t <source src=" . $selected . " type='video/mp4'>\n";
 		echo "</video> <br>";
 	}
 
