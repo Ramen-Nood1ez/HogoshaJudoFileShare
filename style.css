@@ -25,9 +25,9 @@ a, a:visited {
 }
 
 .top_right {
-	position: absolute;
-	top: 0;
-	right: 0;
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
 }
 
 .primary_variant {
