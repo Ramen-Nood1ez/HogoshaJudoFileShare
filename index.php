@@ -20,7 +20,7 @@
 	}
 
 	function changesource($newsource) {
-		global $path;
+		global $path, $selected_tournament;
 		init();
 
 		echo $newsource . "<br>";
@@ -29,20 +29,29 @@
 		echo "<video width='320' height='240' controls>\n";
 		echo "\t <source src=" . $selected . " type='video/mp4'>\n";
 		echo "</video> <br>";
+		echo "<a href='/?$selected_tournament'>Back</a>";
 
 		finish();
 	}
 
-	function createButtons($directory) {
-		echo "<form method='post'>\n";
+	function createButtons($directory, $tournaments = false) {
+		if (!$tournaments) {
 
-		for	($x = 2; $x < count($directory); $x++) {
-			$file_name = $directory[$x];
-			echo "\t<input type='submit' name='btn$x' value='$file_name'> <br>\n";
+			echo "<form method='post'>\n";
+
+			for	($x = 2; $x < count($directory); $x++) {
+				$file_name = $directory[$x];
+				echo "\t<input type='submit' name='btn$x' value='$file_name'> <br>\n";
+			}
+			echo "</form>";
+
+			echo "<a href='/'>Back</a>";
+		} else {
+			for	($x = 2; $x < count($directory); $x++) {
+				$tournament_name = $directory[$x];
+				echo "<a href='/?tournament=$tournament_name'> <br>\n";
+			}
 		}
-		echo "</form>";
-
-		echo "<a href='/'>Back</a>";
 	}
 
 	init();
