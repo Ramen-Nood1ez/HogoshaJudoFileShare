@@ -11,7 +11,7 @@
 	<?php
 		ini_set("include_path", '/home/hogoshaj/php:' . ini_get("include_path") );
 		echo "test!<br>";
-		$directory = scandir("./tournament/Tohkon 2022/");
+		$directory = scandir("./tournament/Tohkon_2022/");
 		foreach	($directory as $item) {
 			echo "$item <br>";
 		}
@@ -20,7 +20,7 @@
 	<br>
 
 	<video controls>
-		<source src="/tournament/Tohkon 2022/Aimana Daniyar\/ vs.\/ Peyton Lang.MOV" type="video/mov">
+		<source src="/tournament/Tohkon_2022/Aimana_Daniyar_vs_Peyton_Lang.MOV" type="video/mov">
 	</video>
 </body>
 </html>
